@@ -1,6 +1,7 @@
 const { VueLoaderPlugin } = require('vue-loader');
 const HtmlPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   resolve: {
@@ -50,9 +51,7 @@ module.exports = {
       },
       {
         test: /\.(png|jpe?g|svg|gif|webp)/,
-        use: [
-          'file-loader',
-        ],
+        use: ['file-loader'],
       },
     ],
   },
@@ -63,6 +62,9 @@ module.exports = {
     }),
     new CopyPlugin({
       patterns: [{ from: 'static' }],
+    }),
+    new Dotenv({
+      systemvars: true, // 해당 옵션을 추가 작성
     }),
   ],
   devServer: {
