@@ -1,7 +1,7 @@
 import {defineStore} from 'pinia';
-
-
 import fetch from 'node-fetch';
+
+const APIKEY = process.env.APIKEY;
 
 export const useMovieStore = defineStore('movie',{
     state() {
@@ -20,7 +20,7 @@ export const useMovieStore = defineStore('movie',{
             if(this.title.trim().length <= 0 || !this.loading) return;
 
             const response = await fetch(
-              `https://www.omdbapi.com?apikey=${process.env.APIKEY}&s=${this.title}&page=${this.page}`
+              `https://www.omdbapi.com?apikey=${APIKEY}&s=${this.title}&page=${this.page}`
             );
 
             const data = await response.json();
@@ -50,7 +50,7 @@ export const useMovieStore = defineStore('movie',{
         },
         async getDetailMovie(id) {
             const response = await fetch(
-              `https://www.omdbapi.com?apikey=${process.env.APIKEY}&i=${id}&plot=full`
+              `https://www.omdbapi.com?apikey=${APIKEY}&i=${id}&plot=full`
             );
 
             const data = await response.json();
