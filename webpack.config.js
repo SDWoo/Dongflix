@@ -43,7 +43,6 @@ module.exports = {
                   @use "sass:meta";
                   @use "sass:selector";
                   @use "sass:string";
-                  @import "~/scss/_variables";
                 `,
             },
           },
