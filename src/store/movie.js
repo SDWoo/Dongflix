@@ -1,4 +1,5 @@
 import {defineStore} from 'pinia';
+import fetch from 'node-fetch';
 
 export const useMovieStore = defineStore('movie',{
     state() {
