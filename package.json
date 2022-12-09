@@ -14,11 +14,18 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ],
   "bugs": {
     "url": "https://github.com/prgrms-fe-devcourse/FEDC3-8_Vue/issues"
   },
   "homepage": "https://github.com/prgrms-fe-devcourse/FEDC3-8_Vue#readme",
   "dependencies": {
+    "node-fetch": "^2.6.7",
     "pinia": "^2.0.27",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6"
@@ -32,12 +39,11 @@
     "babel-loader": "^9.1.0",
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.2",
-    "dotenv-webpack": "^8.0.1",
+    "dotenv": "^16.0.3",
     "eslint": "^8.29.0",
     "eslint-plugin-vue": "^9.8.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
-    "node-fetch": "^3.3.0",
     "postcss": "^8.4.19",
     "postcss-loader": "^7.0.2",
     "sass": "^1.56.1",
