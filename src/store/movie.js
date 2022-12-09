@@ -13,6 +13,7 @@ export const useMovieStore = defineStore('movie',{
     },
     actions: {
         async getMovies() {
+            console.log(process, process.env);
             if(this.title.trim().length <= 0 || !this.loading) return;
 
             const response = await fetch(
