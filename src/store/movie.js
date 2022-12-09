@@ -17,7 +17,7 @@ export const useMovieStore = defineStore('movie',{
             if(this.title.trim().length <= 0 || !this.loading) return;
 
             const response = await fetch(
-              `https://www.omdbapi.com?apikey=${process.env}&s=${this.title}&page=${this.page}`
+              `https://www.omdbapi.com?apikey=${process.env.APIKEY}&s=${this.title}&page=${this.page}`
             );
 
             const data = await response.json();
@@ -47,7 +47,7 @@ export const useMovieStore = defineStore('movie',{
         },
         async getDetailMovie(id) {
             const response = await fetch(
-              `https://www.omdbapi.com?apikey=${process.env}&i=${id}&plot=full`
+              `https://www.omdbapi.com?apikey=${process.env.APIKEY}&i=${id}&plot=full`
             );
 
             const data = await response.json();
